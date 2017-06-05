@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Error.c" />
-    <ClCompile Include="..\src\Global.c" />
-    <ClCompile Include="..\src\main.c" />
+    <ClCompile Include="src\Error.c" />
+    <ClCompile Include="src\Global.c" />
+    <ClCompile Include="src\main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Error.h" />
-    <ClInclude Include="..\src\Global.h" />
+    <ClInclude Include="src\Error.h" />
+    <ClInclude Include="src\Global.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A2D78FC9-97EC-4493-83B2-15B980699AB1}</ProjectGuid>

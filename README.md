@@ -1,2 +1,3 @@
 # Calculator
-No yet
+Calculator on C programming language. 
+Algorithm Reverse Polish Notation.

@@ -23,3 +23,8 @@ calc.vcxproj
 *.js
 *.html
 *.htm
+
+/*
+!/Calculator
+/Calculator/*
+!/Calculator/Documentation

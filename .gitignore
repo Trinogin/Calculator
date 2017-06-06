@@ -17,3 +17,8 @@ x86/
 *.zip
 calc.vcxproj
 *.filters
+
+*.png
+*.js
+*.html
+*.htm

@@ -18,6 +18,7 @@ x86/
 calc.vcxproj
 *.filters
 
+*.txt
 *.png
 *.js
 *.html

@@ -80,7 +80,8 @@ $(document).ready(function(){initNavTree('_error_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Error.h File Reference</div>  </div>
 </div><!--header-->
@@ -93,10 +94,19 @@ $(document).ready(function(){initNavTree('_error_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac7659d73a8cdedc08e9f566bb406689c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> { <a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689caa26c163b80b1f6786ca81dadc14b00fb">ERR_OK</a>
+<tr class="memitem:ac7659d73a8cdedc08e9f566bb406689c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> { <a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689caa26c163b80b1f6786ca81dadc14b00fb">ERR_OK</a>, 
+<a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689ca4c518bfb9b13eddbfdf77ba1b45449b9">ERR_NOT_ENOUGH_MEMORY</a>, 
+<a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689cad57ec19689cefa54a632cd94a204d28c">ERR_OUT_OF_DOMAIN</a>, 
+<a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689caa75684f9c57d904d4c9260161581ef63">ERR_WRONG_COMMENTS</a>
  }<tr class="memdesc:ac7659d73a8cdedc08e9f566bb406689c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of the possible errors.  <a href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac7659d73a8cdedc08e9f566bb406689c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aaa29a7332090ce9fc12dddd880865244"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_error_8h.html#aaa29a7332090ce9fc12dddd880865244">GetErrorString</a> (<a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> error)</td></tr>
+<tr class="memdesc:aaa29a7332090ce9fc12dddd880865244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the right string to report error.  <a href="#aaa29a7332090ce9fc12dddd880865244">More...</a><br /></td></tr>
+<tr class="separator:aaa29a7332090ce9fc12dddd880865244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for error. </p>
@@ -118,7 +128,41 @@ Enumerations</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac7659d73a8cdedc08e9f566bb406689caa26c163b80b1f6786ca81dadc14b00fb"></a>ERR_OK&#160;</td><td class="fielddoc"><p>No error. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ac7659d73a8cdedc08e9f566bb406689ca4c518bfb9b13eddbfdf77ba1b45449b9"></a>ERR_NOT_ENOUGH_MEMORY&#160;</td><td class="fielddoc"><p>Error means that memory is not enough. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7659d73a8cdedc08e9f566bb406689cad57ec19689cefa54a632cd94a204d28c"></a>ERR_OUT_OF_DOMAIN&#160;</td><td class="fielddoc"><p>Out of domain of the function. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7659d73a8cdedc08e9f566bb406689caa75684f9c57d904d4c9260161581ef63"></a>ERR_WRONG_COMMENTS&#160;</td><td class="fielddoc"><p>Wrong comment, smthg before //. </p>
+</td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aaa29a7332090ce9fc12dddd880865244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa29a7332090ce9fc12dddd880865244">&#9670;&nbsp;</a></span>GetErrorString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const* GetErrorString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a>&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Choose the right string to report error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>Error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String to print. </dd></dl>
 
 </div>
 </div>

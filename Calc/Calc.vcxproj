@@ -24,7 +24,6 @@
     <ClCompile Include="src\main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="description.h" />
     <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\Global.h" />
   </ItemGroup>

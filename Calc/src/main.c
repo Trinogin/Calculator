@@ -9,6 +9,9 @@
 *
 * Program works with real number. Dot - separator.
 * Program can have one argument - file for reading. 
+* Allowed to use comments. Write any number space symbols
+* and after "//" you write any text. But no one symbol before
+ "//", because it will be interpretated like an error.
 *\warning If number of arguments > 2 - this is error.
 */
 
@@ -24,6 +27,17 @@
 #include"Error.h"
 #include"vld.h"
 #include<stdio.h>
+
+/*!
+\brief Report about error.
+\param[in] error Error.
+*/
+void ReportError(error_t error)
+{
+  printf("ERROR: ");
+  puts(GetErrorString(error));
+}
+
 
 int main(int argc, char const* argv[])
 {

@@ -14,6 +14,16 @@
 typedef enum
 {
   ERR_OK, ///<No error. 
+  ERR_NOT_ENOUGH_MEMORY, ///< Error means that memory is not enough.
+  ERR_OUT_OF_DOMAIN, ///< Out of domain of the function.
+  ERR_WRONG_COMMENTS, ///< Wrong comment, smthg before //.
 } error_t;
+
+/*!
+\brief Choose the right string to report error.
+\param[in] error Error.
+\return String to print.
+*/
+char const* GetErrorString(error_t error);
 
 #endif  //_ERROR_H_INCLUDED

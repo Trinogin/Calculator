@@ -1,3 +1,23 @@
+/*!
+*\mainpage Application for arithmetic calculations.
+*\authors Andrey Trinogin.
+*\date 6 june of 2017.
+*\version 2.0.
+*
+* Based on Reverse Polish Notation (RPN) algorithm.
+* Realisation - C programming language.
+*
+* Program works with real number. Dot - separator.
+* Program can have one argument - file for reading. 
+*\warning If number of arguments > 2 - this is error.
+*/
+
+/*!
+*\file
+*\brief Main file of program.
+*
+*/
+
 #pragma warning(disable:4996)
 
 #include"Global.h"

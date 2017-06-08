@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geterrorstring',['GetErrorString',['../_error_8c.html#aaa29a7332090ce9fc12dddd880865244',1,'GetErrorString(error_t error):&#160;Error.c'],['../_error_8h.html#aaa29a7332090ce9fc12dddd880865244',1,'GetErrorString(error_t error):&#160;Error.c']]]
+  ['deletestack',['DeleteStack',['../_stack_8h.html#a8730766238fdd23784562996d5db3d50',1,'Stack.h']]]
 ];

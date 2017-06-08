@@ -24,12 +24,18 @@
     <ClCompile Include="src\main.c">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="src\Stack.c">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Error.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="src\Global.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Stack.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

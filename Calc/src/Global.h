@@ -20,4 +20,16 @@
 */
 #define UNUSED_PARAMETER(name) (void)name
 
+/*!
+*\brief Directive for creating my boolean type.
+*
+*/
+#define FALSE 0
+
+/*!
+*\brief Directive for creating my boolean type.
+*
+*/
+#define TRUE 1
+
 #endif // _GLOBAL_H

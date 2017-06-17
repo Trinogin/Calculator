@@ -27,6 +27,7 @@
 #include"Error.h"
 #include"vld.h"
 #include<stdio.h>
+#include<stdlib.h>
 
 /*!
 \brief Report about error.
@@ -38,11 +39,22 @@ void ReportError(error_t error)
   puts(GetErrorString(error));
 }
 
+void ProcessLine(char const* line, error_t* error)
+{
+
+}
+
+char* ReadLine(FILE* in, error_t* error)
+{
+  UNUSED_PARAMETER(in);
+  UNUSED_PARAMETER(error);
+  return NULL;
+}
 
 int main(int argc, char const* argv[])
 {
   FILE* in = stdin;
-  char* line = NULL;
+  char* line;// = NULL;
   error_t current_Error = ERR_OK;
 
   if (argc > 2)
@@ -55,6 +67,12 @@ int main(int argc, char const* argv[])
   {
     printf("ERROR: Cannot open file '%s'\n", argv[1]);
     return -1;
+  }
+
+  while ((line = ReadLine(in, &current_Error)) != NULL)
+  {
+    ProcessLine(line, &current_Error);
+    free(line);
   }
 
   if (in != stdin)

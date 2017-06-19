@@ -2,7 +2,7 @@
 *\mainpage Application for arithmetic calculations.
 *\authors Andrey Trinogin.
 *\date 6 june of 2017.
-*\version 2.0.
+*\version 2.4.
 *
 * Based on Reverse Polish Notation (RPN) algorithm.
 * Realisation - C programming language.
@@ -62,8 +62,8 @@ void ProcessLine(char const* line, error_t* error)
 
 /*!
 *\brief Reading string.
-*\param[in] Stream pointer.
-*\param[in] Error pointer.
+*\param[in] in Stream pointer.
+*\param[in] error Error pointer.
 *
 */
 char* ReadLine(FILE* in, error_t* error)

@@ -92,12 +92,18 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <code>#include &quot;<a class="el" href="_error_8h_source.html">Error.h</a>&quot;</code><br />
 <code>#include &quot;vld.h&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa9a8f58491aee76c5ec16b40e7c76b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa9a8f58491aee76c5ec16b40e7c76b22">ReportError</a> (<a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> error)</td></tr>
 <tr class="memdesc:aa9a8f58491aee76c5ec16b40e7c76b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report about error.  <a href="#aa9a8f58491aee76c5ec16b40e7c76b22">More...</a><br /></td></tr>
 <tr class="separator:aa9a8f58491aee76c5ec16b40e7c76b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3287d3161026fd45b4e8501adb29452c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3287d3161026fd45b4e8501adb29452c">ProcessLine</a> (char const *line, <a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> *error)</td></tr>
+<tr class="separator:a3287d3161026fd45b4e8501adb29452c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2db7dfe459237204527cb33346456c6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa2db7dfe459237204527cb33346456c6">ReadLine</a> (FILE *in, <a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> *error)</td></tr>
+<tr class="memdesc:aa2db7dfe459237204527cb33346456c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading string.  <a href="#aa2db7dfe459237204527cb33346456c6">More...</a><br /></td></tr>
+<tr class="separator:aa2db7dfe459237204527cb33346456c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
 <tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,6 +135,71 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3287d3161026fd45b4e8501adb29452c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3287d3161026fd45b4e8501adb29452c">&#9670;&nbsp;</a></span>ProcessLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessLine </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> *&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2db7dfe459237204527cb33346456c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2db7dfe459237204527cb33346456c6">&#9670;&nbsp;</a></span>ReadLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ReadLine </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_error_8h.html#ac7659d73a8cdedc08e9f566bb406689c">error_t</a> *&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reading string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>Stream pointer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>Error pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

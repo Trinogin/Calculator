@@ -41,20 +41,109 @@ void ReportError(error_t error)
 
 void ProcessLine(char const* line, error_t* error)
 {
+  double result;
 
+  if (*error != ERR_OK)
+  {
+    ReportError(*error);
+    return;
+  }
+
+  printf("%s == ", line);
+
+  result = 2;
+  if (*error == ERR_OK)
+    printf("%lg\n", result);
+  else
+  {
+    ReportError(*error);
+  }
 }
 
+/*!
+*\brief Reading string.
+*\param[in] Stream pointer.
+*\param[in] Error pointer.
+*
+*/
 char* ReadLine(FILE* in, error_t* error)
 {
-  UNUSED_PARAMETER(in);
-  UNUSED_PARAMETER(error);
-  return NULL;
+  char* line = NULL;
+  char* str;
+  char ch;
+  int num;
+  int end_Flag;
+
+  end_Flag = FALSE;
+  num = 1;
+  while ((ch = (char)getc(in)) != '\n')
+  {
+    str = realloc(line, num * sizeof(char));
+    if (str != NULL)
+    {
+      line = str;
+      if (ch == EOF)
+      {
+        line[num - 1] = '\0';
+        end_Flag = TRUE;
+      }
+      else
+      {
+        line[num - 1] = ch;
+        num++;
+      }
+    }
+    else
+    {
+      *error = ERR_NOT_ENOUGH_MEMORY;
+      free(line);
+      if (ch == '\n') // Если ошибка случилась на последнем символе
+        return (char*)1;
+      else if (ch == EOF)
+        return NULL;
+      else  // Чтение вхолостую до конца строки
+      {
+        while ((ch = (char)getc(in)) != '\n')
+        {
+          if (ch == EOF)
+            return (char*)1;
+        }
+        return (char*)1;
+      }
+    }
+    if (end_Flag == TRUE)
+      break;
+  }
+  if (end_Flag == TRUE)
+  {
+    if (*line == '\0')
+    {
+      free(line);
+      line = NULL;
+      return NULL;
+    }
+    else
+      return line;
+  }
+  str = realloc(line, num * sizeof(char));
+  if (str != NULL)
+  {
+    line = str;
+    line[num - 1] = '\0';
+  }
+  else
+  {
+    *error = ERR_NOT_ENOUGH_MEMORY;
+    free(line);
+    return (char*)1;
+  }
+  return line;
 }
 
 int main(int argc, char const* argv[])
 {
   FILE* in = stdin;
-  char* line;// = NULL;
+  char* line = NULL;
   error_t current_Error = ERR_OK;
 
   if (argc > 2)
@@ -73,6 +162,7 @@ int main(int argc, char const* argv[])
   {
     ProcessLine(line, &current_Error);
     free(line);
+    current_Error = ERR_OK;
   }
 
   if (in != stdin)

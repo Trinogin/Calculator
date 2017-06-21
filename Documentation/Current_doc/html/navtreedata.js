@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "Calculator", "index.html", [
-    [ "Application for arithmetic calculations.", "index.html", null ],
+    [ "Application for ariphmetic calculations.", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -25,7 +25,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_error_8c.html"
+"_computing_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

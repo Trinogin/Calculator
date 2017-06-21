@@ -9,28 +9,28 @@ char const* GetErrorString(error_t error)
 {
   switch (error)
   {
-    /* case(ERR_NOT_ENOUGH_MEMORY):
-       return "not enough memory!";
-     case(ERR_WRONG_EXPRESSION):
-       return "wrong expression!";
+     case(ERR_NOT_ENOUGH_MEMORY):
+       return "Not enough memory!";
+     case (ERR_WRONG_COMMENTS):
+       return "Comment is wrong";
+    /*case(ERR_WRONG_EXPRESSION):
+       return "Wrong expression!";
      case (ERR_BRACKETS):
-       return "unbalanced brackets!";
+       return "Unbalanced brackets!";
      case (ERR_STACK_IS_EMPTY):
-       return "smthg wrong, stack was empty!";
+       return "Smthg wrong, stack was empty!";
      case (ERR_OUT_OF_DOMAIN):
        return"out of domain function!";
      case (ERR_WRONG_EXPRESSION_EMPTY_BRACKETS):
-       return "wrong expression - empty brackets!";
+       return "Wrong expression - empty brackets!";
      case (ERR_NOT_ALLOWED_SYMBOLS):
-       return "not allowed symbol(s) in string!";
+       return "Not allowed symbol(s) in string!";
      case  (ERR_UNEXPECTED_SYMBOL_E):
-       return "unexpected symbol 'e' in string!";
+       return "Unexpected symbol 'e' in string!";
      case  (ERR_UNEXPECTED_SYMBOL_POINT):
-       return "unexpected point in string!";
-     case (ERR_WRONG_COMMENTS):
-       return "comment is wrong";
+       return "Unexpected point in string!";
      case  (ERR_NO_ARGUMENTS):
-       return "no function argument";
+       return "No function argument";
      default:
        return "";*/
   }

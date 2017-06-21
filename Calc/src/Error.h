@@ -15,8 +15,8 @@ typedef enum
 {
   ERR_OK, ///< No error. 
   ERR_NOT_ENOUGH_MEMORY, ///< Error means that memory is not enough.
-  ERR_OUT_OF_DOMAIN, ///< Out of domain of the function.
   ERR_WRONG_COMMENTS, ///< Wrong comment, smthg before //.
+  ERR_OUT_OF_DOMAIN, ///< Out of domain of the function.
 } error_t;
 
 /*!

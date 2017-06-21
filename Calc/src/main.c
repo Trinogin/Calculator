@@ -1,8 +1,8 @@
 /*!
-*\mainpage Application for arithmetic calculations.
+*\mainpage Application for ariphmetic calculations.
 *\authors Andrey Trinogin.
-*\date 6 june of 2017.
-*\version 2.4.
+*\date 06.06.2017.
+*\version 2.5
 *
 * Based on Reverse Polish Notation (RPN) algorithm.
 * Realisation - C programming language.
@@ -11,7 +11,8 @@
 * Program can have one argument - file for reading. 
 * Allowed to use comments. Write any number space symbols
 * and after "//" you write any text. But no one symbol before
- "//", because it will be interpretated like an error.
+* "//", because it will be interpretated like an error.
+*
 *\warning If number of arguments > 2 - this is error.
 */
 
@@ -25,6 +26,7 @@
 
 #include"Global.h"
 #include"Error.h"
+#include"Computing.h"
 #include"vld.h"
 #include<stdio.h>
 #include<stdlib.h>
@@ -48,10 +50,9 @@ void ProcessLine(char const* line, error_t* error)
     ReportError(*error);
     return;
   }
-
   printf("%s == ", line);
 
-  result = 2;
+  result = Calculate(line, error);
   if (*error == ERR_OK)
     printf("%lg\n", result);
   else
@@ -126,6 +127,7 @@ char* ReadLine(FILE* in, error_t* error)
       return line;
   }
   str = realloc(line, num * sizeof(char));
+  //str = NULL;
   if (str != NULL)
   {
     line = str;
@@ -161,7 +163,8 @@ int main(int argc, char const* argv[])
   while ((line = ReadLine(in, &current_Error)) != NULL)
   {
     ProcessLine(line, &current_Error);
-    free(line);
+    if (current_Error == ERR_OK)
+      free(line);
     current_Error = ERR_OK;
   }
 

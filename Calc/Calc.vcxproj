@@ -19,12 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Computing.c" />
     <ClCompile Include="src\Error.c" />
     <ClCompile Include="src\Global.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\Stack.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Computing.h" />
+    <ClInclude Include="src\Computing_real.h" />
     <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\Global.h" />
     <ClInclude Include="src\Stack.h" />

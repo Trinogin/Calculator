@@ -27,6 +27,7 @@
 #include"Global.h"
 #include"Error.h"
 #include"Computing.h"
+#include"Handler.h"
 #include"vld.h"
 #include<stdio.h>
 #include<stdlib.h>
@@ -41,9 +42,22 @@ void ReportError(error_t error)
   puts(GetErrorString(error));
 }
 
+int NeedCalculate(char const* line)
+{
+  UNUSED_PARAMETER(line);
+  return 0;
+}
+
 void ProcessLine(char const* line, error_t* error)
 {
   double result;
+
+  if (!NeedCalculate(line))
+  {
+    puts(line);
+    return;
+  }
+    
 
   if (*error != ERR_OK)
   {

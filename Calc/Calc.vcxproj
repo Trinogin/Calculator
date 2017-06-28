@@ -30,6 +30,7 @@
     <ClInclude Include="src\Computing_real.h" />
     <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\Global.h" />
+    <ClInclude Include="src\Handler.h" />
     <ClInclude Include="src\Stack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

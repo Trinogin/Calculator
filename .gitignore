@@ -15,8 +15,6 @@ x86/
 *.pch
 *.log
 *.zip
-calc.vcxproj
-*.filters
 
 *.txt
 *.png
@@ -24,7 +22,6 @@ calc.vcxproj
 *.html
 *.htm
 
-/*
-!/Calculator
-/Calculator/*
-!/Calculator/Documentation
+calc.vcxproj
+*.filters
+

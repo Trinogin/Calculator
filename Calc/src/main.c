@@ -42,37 +42,36 @@ void ReportError(error_t error)
   puts(GetErrorString(error));
 }
 
-int NeedCalculate(char const* line)
-{
-  UNUSED_PARAMETER(line);
-  return 0;
-}
-
 void ProcessLine(char const* line, error_t* error)
 {
   double result;
-
-  if (!NeedCalculate(line))
-  {
-    puts(line);
-    return;
-  }
-    
 
   if (*error != ERR_OK)
   {
     ReportError(*error);
     return;
   }
+
+  if (NeedCalculate(line) == FALSE)
+  {
+    puts(line);
+    return;
+  }
+  
+  if (IsError(line) != ERR_OK)
+  {
+    ReportError(*error);
+    return;
+  }
+
+
   printf("%s == ", line);
 
   result = Calculate(line, error);
   if (*error == ERR_OK)
     printf("%lg\n", result);
   else
-  {
     ReportError(*error);
-  }
 }
 
 /*!

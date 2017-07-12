@@ -22,6 +22,7 @@
     <ClCompile Include="src\Computing.c" />
     <ClCompile Include="src\Error.c" />
     <ClCompile Include="src\Global.c" />
+    <ClCompile Include="src\Handler.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\Stack.c" />
   </ItemGroup>
@@ -31,6 +32,7 @@
     <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\Global.h" />
     <ClInclude Include="src\Handler.h" />
+    <ClInclude Include="src\Handler_real.h" />
     <ClInclude Include="src\Stack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

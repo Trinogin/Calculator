@@ -33,8 +33,8 @@
 #include<stdlib.h>
 
 /*!
-\brief Report about error.
-\param[in] error Error.
+*\brief Report about error.
+*\param[in] error Error.
 */
 void ReportError(error_t error)
 {
@@ -42,6 +42,12 @@ void ReportError(error_t error)
   puts(GetErrorString(error));
 }
 
+/*!
+*\brief Main work with string.
+*\param[in] line Math expression.
+*\param[in] error Error pointer.
+*
+*/
 void ProcessLine(char const* line, error_t* error)
 {
   double result;
@@ -64,14 +70,17 @@ void ProcessLine(char const* line, error_t* error)
     return;
   }
 
-
   printf("%s == ", line);
 
   result = Calculate(line, error);
   if (*error == ERR_OK)
     printf("%lg\n", result);
   else
+  {
     ReportError(*error);
+    *error = ERR_OK;
+  }
+    
 }
 
 /*!
@@ -140,7 +149,6 @@ char* ReadLine(FILE* in, error_t* error)
       return line;
   }
   str = realloc(line, num * sizeof(char));
-  //str = NULL;
   if (str != NULL)
   {
     line = str;
@@ -149,13 +157,12 @@ char* ReadLine(FILE* in, error_t* error)
   else
   {
     *error = ERR_NOT_ENOUGH_MEMORY;
-    free(line);
     return (char*)1;
   }
   return line;
 }
 
-int main(int argc, char const* argv[])
+int main(int argc, char const *argv[])
 {
   FILE* in = stdin;
   char* line = NULL;
@@ -175,12 +182,16 @@ int main(int argc, char const* argv[])
 
   while ((line = ReadLine(in, &current_Error)) != NULL)
   {
+    if (current_Error == ERR_NOT_ENOUGH_MEMORY)
+    {
+      ReportError(current_Error);
+      current_Error = ERR_OK;
+      continue;
+    }
     ProcessLine(line, &current_Error);
-    if (current_Error == ERR_OK)
-      free(line);
     current_Error = ERR_OK;
+    free(line);
   }
-
   if (in != stdin)
     fclose(in);
   return 0;

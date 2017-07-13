@@ -12,11 +12,13 @@
 #pragma once
 
 #include"Error.h"
+#include<ctype.h>
 
 /*!
 *\brief Checking for calculating.
-*
 *\param[in] line Expression for checking.
+*
+* Check is it empty string, comment or wrong comment.
 */
 int NeedCalculate(char const* line);
 

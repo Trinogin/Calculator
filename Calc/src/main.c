@@ -50,16 +50,28 @@ void ReportError(error_t error)
 void ProcessLine(char const* line, error_t* error)
 {
   double result;
+  int a;
 
   if (*error != ERR_OK)
   {
     ReportError(*error);
+    *error = ERR_OK;
     return;
   }
 
-  if (NeedCalculate(line) == FALSE)
+  a = NeedCalculate(line);
+  if ( a != TRUE)
   {
-    puts(line);
+    if (a == 0)
+    {
+      puts(line);
+      return;
+    }
+    if (a == ERR_WRONG_COMMENTS)
+    {
+      printf("%s == ", line);
+      ReportError(a);
+    }
     return;
   }
   

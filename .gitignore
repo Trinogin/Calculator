@@ -3,6 +3,7 @@
 [Rr]elease/
 x64/
 x86/
+[Dd]ocumentation
 *.VC.db
 *.VC.VC.opendb
 *.user
@@ -22,6 +23,6 @@ x86/
 *.html
 *.htm
 
-calc.vcxproj
+Calc.vcxproj
 *.filters
 

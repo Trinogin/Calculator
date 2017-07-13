@@ -8,6 +8,9 @@
 #include"Handler_real.h"
 #include"Global.h"
 
+/*!
+*
+*/
 int NeedCalculate(char const* line)
 {
   UNUSED_PARAMETER(line);

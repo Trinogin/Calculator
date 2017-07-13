@@ -13,6 +13,13 @@
 
 #include"Error.h"
 
+/*!
+*\brief Hard fucntion for calculating.
+*\param[in] line Expression for calculate.
+*\param[in] error Error pointer.
+*
+* Function contains other functions, which does different work.
+*/
 double Calculate(char const* line, error_t* error);
 
 #endif //_COMPUTING_H_INCLUDED

@@ -48,7 +48,7 @@ void ResizeStackData(stack_t* stack, error_t* error);
 /*!
 *\brief Delete stack.
 *\param[in] stack Stack pointer.
-
+*
 * Free all stack data's.
 */
 void DeleteStack(stack_t* stack);
@@ -68,7 +68,7 @@ void PushToStack(stack_t* stack, error_t* error, double arg);
 *\param[in] stack Stack pointer.
 *\param[in] error Error pointer.
 *\return Real number, last in stack.
-
+*
 * Get last stack's element and reduce number of last element.
 * Possible errors: stack is empty.
 */

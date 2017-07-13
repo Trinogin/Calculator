@@ -35,7 +35,6 @@
 /*!
 *\brief Report about error.
 *\param[in] error Error.
-*
 */
 void ReportError(error_t error)
 {

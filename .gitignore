@@ -25,3 +25,5 @@ Calc.vcxproj
 *.png
 *.js
 *.htm
+
+[Dd]ocumentation/

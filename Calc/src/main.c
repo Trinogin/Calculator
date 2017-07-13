@@ -35,9 +35,7 @@
 /*!
 *\brief Report about error.
 *\param[in] error Error.
-
-test for gitignore
-and one more
+*
 */
 void ReportError(error_t error)
 {

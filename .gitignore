@@ -3,7 +3,7 @@
 [Rr]elease/
 x64/
 x86/
-[Dd]ocumentation
+[Dd]ocumentation/
 *.VC.db
 *.VC.VC.opendb
 *.user
@@ -17,12 +17,11 @@ x86/
 *.log
 *.zip
 
-*.txt
-*.png
-*.js
-*.html
-*.htm
-
 Calc.vcxproj
 *.filters
 
+*.html
+*.txt
+*.png
+*.js
+*.htm

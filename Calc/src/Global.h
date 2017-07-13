@@ -22,13 +22,11 @@
 
 /*!
 *\brief Directive for creating my boolean type.
-*
 */
 #define FALSE 0
 
 /*!
 *\brief Directive for creating my boolean type.
-*
 */
 #define TRUE 1
 

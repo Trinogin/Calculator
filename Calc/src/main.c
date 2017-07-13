@@ -35,6 +35,9 @@
 /*!
 *\brief Report about error.
 *\param[in] error Error.
+
+test for gitignore
+and one more
 */
 void ReportError(error_t error)
 {
@@ -46,7 +49,6 @@ void ReportError(error_t error)
 *\brief Main work with string.
 *\param[in] line Math expression.
 *\param[in] error Error pointer.
-*
 */
 void ProcessLine(char const* line, error_t* error)
 {
@@ -87,7 +89,6 @@ void ProcessLine(char const* line, error_t* error)
 *\brief Reading string.
 *\param[in] in Stream pointer.
 *\param[in] error Error pointer.
-*
 */
 char* ReadLine(FILE* in, error_t* error)
 {

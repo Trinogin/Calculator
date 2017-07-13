@@ -27,50 +27,50 @@ typedef struct
 } stack_t;
 
 /*!
-\brief Create a new stack.
-\param[in] error Error pointer.
-\return Pointer to new stack.
-
-Possible errors: not enough memory.
+*\brief Create a new stack.
+*\param[in] error Error pointer.
+*\return Pointer to new stack.
+*
+*Possible errors: not enough memory.
 */
 stack_t* NewStackCreate(error_t* error);
 
 /*!
-\brief Increase stack.
-\param[in] stack pointer so stack.
-\param[in] error error pointer
-
-This is helper function, invoked if size of stack is too small.
-Possible errors: not enough memory.
+*\brief Increase stack.
+*\param[in] stack pointer so stack.
+*\param[in] error error pointer
+*
+* This is helper function, invoked if size of stack is too small.
+* Possible errors: not enough memory.
 */
 void ResizeStackData(stack_t* stack, error_t* error);
 
 /*!
-\brief Delete stack.
-\param[in] stack Stack pointer.
+*\brief Delete stack.
+*\param[in] stack Stack pointer.
 
-Free all stack data's.
+* Free all stack data's.
 */
 void DeleteStack(stack_t* stack);
 
 /*!
-\brief Add element to stack.
-\param[in] stack Stack pointer.
-\param[in] error Error pointer.
-\param[in] arg Adding number.
-
-Checks stack size, if needed increase it and add element to stack.
+*\brief Add element to stack.
+*\param[in] stack Stack pointer.
+*\param[in] error Error pointer.
+*\param[in] arg Adding number.
+*
+* Checks stack size, if needed increase it and add element to stack.
 */
 void PushToStack(stack_t* stack, error_t* error, double arg);
 
 /*!
-\brief
-\param[in] stack Stack pointer.
-\param[in] error Error pointer.
-\return Real number, last in stack.
+*\brief
+*\param[in] stack Stack pointer.
+*\param[in] error Error pointer.
+*\return Real number, last in stack.
 
-Get last stack's element and reduce number of last element.
-Possible errors: stack is empty.
+* Get last stack's element and reduce number of last element.
+* Possible errors: stack is empty.
 */
 double PopFromStack(stack_t* stack, error_t* error);
 

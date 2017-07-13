@@ -3,7 +3,6 @@
 *\brief Header file for computing.
 *
 * This file is realisation of computing module.
-*
 */
 
 #ifndef _COMPUTING_REAL_H_INCLUDED
@@ -13,8 +12,15 @@
 
 #include<stdlib.h>
 
+
+/*!
+*
+*/
 void PrecountPrepare(char const* line, error_t* error);
 
+/*1
+*
+*/
 char* SortStation(char const* line, error_t* error);
 
 #endif //_COMPUTING_REAL_H_INCLUDED

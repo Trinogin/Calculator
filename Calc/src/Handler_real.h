@@ -2,7 +2,6 @@
 *\file
 *\brief
 *
-*
 */
 
 #ifndef _HANDLER_REAL_H_INCLUDED

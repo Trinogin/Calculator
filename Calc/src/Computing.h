@@ -3,7 +3,6 @@
 *\brief Header file for computing.
 *
 * This file is interface of computing module.
-* 
 */
 
 

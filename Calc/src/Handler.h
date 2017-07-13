@@ -4,7 +4,6 @@
 *
 * This file is interface of handler module.
 * For finding errors, comments and etc.
-*
 */
 
 #ifndef _HANDLER_H_INCLUDED
@@ -18,7 +17,6 @@
 *\brief Checking for calculating.
 *
 *\param[in] line Expression for checking.
-*
 */
 int NeedCalculate(char const* line);
 

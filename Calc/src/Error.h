@@ -23,6 +23,7 @@ typedef enum
 \brief Choose the right string to report error.
 \param[in] error Error.
 \return String to print.
+*
 */
 char const* GetErrorString(error_t error);
 
